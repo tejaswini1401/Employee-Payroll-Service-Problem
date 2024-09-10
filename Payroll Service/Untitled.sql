@@ -19,3 +19,16 @@ SELECT * FROM employee_payroll;
 SELECT salary FROM employee_payroll WHERE name = "Teja";
 
 SELECT * FROM employee_payroll WHERE start BETWEEN CAST('2023-11-15' AS DATE) AND DATE(now());
+
+ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
+
+describe employee_payroll;
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE employee_payroll SET gender = 'F' WHERE name = 'Teja';
+UPDATE employee_payroll SET gender = 'F' WHERE name = 'Sami';
+UPDATE employee_payroll SET gender = 'M' WHERE name = 'Momo';
+SET SQL_SAFE_UPDATES = 1;
+
+SELECT * FROM employee_payroll;
+
