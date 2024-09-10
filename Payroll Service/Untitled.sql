@@ -14,3 +14,5 @@ INSERT INTO employee_payroll (name, salary, start) VALUES
 ("Momo", 300000, '2024-07-15'),
 ("Sami", 400000, '2025-01-15');
 
+SELECT * FROM employee_payroll;
+
