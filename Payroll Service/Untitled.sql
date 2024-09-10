@@ -9,3 +9,8 @@ CREATE TABLE employee_payroll(
     start Date NOT NULL,
     PRIMARY KEY (id)
 );
+INSERT INTO employee_payroll (name, salary, start) VALUES
+("Teja", 500000, '2024-11-15'),
+("Momo", 300000, '2024-07-15'),
+("Sami", 400000, '2025-01-15');
+
