@@ -16,3 +16,6 @@ INSERT INTO employee_payroll (name, salary, start) VALUES
 
 SELECT * FROM employee_payroll;
 
+SELECT salary FROM employee_payroll WHERE name = "Teja";
+
+SELECT * FROM employee_payroll WHERE start BETWEEN CAST('2023-11-15' AS DATE) AND DATE(now());
