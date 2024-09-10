@@ -32,3 +32,18 @@ SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM employee_payroll;
 
+SELECT AVG(salary) FROM employee_payroll WHERE gender = 'F' GROUP BY gender;
+
+SELECT gender, AVG(salary) FROM employee_payroll GROUP BY gender;
+
+SELECT gender, COUNT(salary) FROM employee_payroll GROUP BY gender;
+
+SELECT gender, SUM(salary) FROM employee_payroll GROUP BY gender;
+
+SELECT gender, MIN(salary) FROM employee_payroll GROUP BY gender;
+
+SELECT gender, MAX(salary) FROM employee_payroll GROUP BY gender;
+
+
+
+
