@@ -28,7 +28,6 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE employee_payroll SET gender = 'F' WHERE name = 'Teja';
 UPDATE employee_payroll SET gender = 'F' WHERE name = 'Sami';
 UPDATE employee_payroll SET gender = 'M' WHERE name = 'Momo';
-SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM employee_payroll;
 
@@ -44,6 +43,9 @@ SELECT gender, MIN(salary) FROM employee_payroll GROUP BY gender;
 
 SELECT gender, MAX(salary) FROM employee_payroll GROUP BY gender;
 
+ALTER TABLE employee_payroll ADD COLUMN employee_phone VARCHAR(10),
+ADD COLUMN employee_address VARCHAR(50) DEFAULT "Pune",
+ADD COLUMN department VARCHAR(10) NOT NULL;
 
-
+SELECT * FROM employee_payroll;
 
