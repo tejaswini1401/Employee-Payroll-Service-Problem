@@ -72,5 +72,5 @@ VALUES
 ('Teressa','F', 50000.00, 2000.00, 48000.00, 8000.00, 40000.00, '1234567890', 'Pune', 'Sales'),
 ('Teressa','F', 52000.00, 2500.00, 49500.00, 8250.00, 41250.00, '0987654321', 'Pune', 'Sales');
 
-SELECT * FROM employee_payroll;
+SELECT * FROM employee_payroll 	WHERE name = "Teressa"; 
 
