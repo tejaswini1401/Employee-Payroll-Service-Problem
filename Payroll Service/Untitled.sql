@@ -43,9 +43,19 @@ SELECT gender, MIN(salary) FROM employee_payroll GROUP BY gender;
 
 SELECT gender, MAX(salary) FROM employee_payroll GROUP BY gender;
 
-ALTER TABLE employee_payroll ADD COLUMN employee_phone VARCHAR(10),
+ALTER TABLE employee_payroll 
+ADD COLUMN employee_phone VARCHAR(10),
 ADD COLUMN employee_address VARCHAR(50) DEFAULT "Pune",
-ADD COLUMN department VARCHAR(10) NOT NULL;
+ADD COLUMN department VARCHAR(50) NOT NULL;
+
+SELECT * FROM employee_payroll;
+
+ALTER TABLE employee_payroll
+ADD COLUMN basic_pay DECIMAL(15, 2),
+ADD COLUMN deductions DECIMAL(15, 2),
+ADD COLUMN taxable_pay DECIMAL(15, 2),
+ADD COLUMN income_tax DECIMAL(15, 2),
+ADD COLUMN net_pay DECIMAL(15, 2);
 
 SELECT * FROM employee_payroll;
 
