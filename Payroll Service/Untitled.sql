@@ -59,3 +59,18 @@ ADD COLUMN net_pay DECIMAL(15, 2);
 
 SELECT * FROM employee_payroll;
 
+ALTER TABLE employee_payroll
+MODIFY salary DECIMAL(10,2) DEFAULT 0.00,
+ALTER COLUMN start SET DEFAULT '2024-01-01';
+
+UPDATE employee_payroll
+SET department = "Sales"
+WHERE name = "Teressa";
+
+INSERT INTO employee_payroll (name,gender, basic_pay, deductions, taxable_pay, income_tax, net_pay, employee_phone, employee_address, department)
+VALUES
+('Teressa','F', 50000.00, 2000.00, 48000.00, 8000.00, 40000.00, '1234567890', 'Pune', 'Sales'),
+('Teressa','F', 52000.00, 2500.00, 49500.00, 8250.00, 41250.00, '0987654321', 'Pune', 'Sales');
+
+SELECT * FROM employee_payroll;
+
